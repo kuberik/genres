@@ -1,0 +1,32 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+configurations:
+# TODO: change to abs github path
+- configuration.yaml
+
+resources:
+- ci-movie.yaml
+
+configMapGenerator:
+- name: ci-scripts
+  files:
+  - github-status-update.sh
+  - git-clone.sh
+  - docker-login.sh
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+# vars:
+# - name: GITHUB_REPO_NAME
+#   objref: &screener_obj_ref
+#     kind: Screener
+#     name: ci
+#   fieldref:
+#     fieldpath: spec.config.repo.name
+# - name: GITHUB_REPO_OWNER
+#   objref: *screener_obj_ref
+#   fieldref:
+#     fieldpath: spec.config.repo.owner

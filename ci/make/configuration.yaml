@@ -1,0 +1,104 @@
+# Created using template https://github.com/kubernetes-sigs/kustomize/blob/master/api/konfig/builtinpluginconsts/namereference.go
+nameReference:
+- kind: ConfigMap
+  version: v1
+  fieldSpecs:
+  # actions
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/volumes/configMap/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/containers/env/valueFrom/configMapKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/initContainers/env/valueFrom/configMapKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/containers/envFrom/configMapRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/initContainers/envFrom/configMapRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/volumes/projected/sources/configMap/name
+    kind: Movie
+  # credits opening
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/volumes/configMap/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/containers/env/valueFrom/configMapKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/initContainers/env/valueFrom/configMapKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/containers/envFrom/configMapRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/initContainers/envFrom/configMapRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/volumes/projected/sources/configMap/name
+    kind: Movie
+  # credits closing
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/volumes/configMap/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/containers/env/valueFrom/configMapKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/initContainers/env/valueFrom/configMapKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/containers/envFrom/configMapRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/initContainers/envFrom/configMapRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/volumes/projected/sources/configMap/name
+    kind: Movie
+
+- kind: Secret
+  version: v1
+  fieldSpecs:
+  # actions
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/volumes/secret/secretName
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/containers/env/valueFrom/secretKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/initContainers/env/valueFrom/secretKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/containers/envFrom/secretRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/initContainers/envFrom/secretRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/imagePullSecrets/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/scenes/frames/action/template/spec/volumes/projected/sources/secret/name
+    kind: Movie
+  # credits opening
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/volumes/secret/secretName
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/containers/env/valueFrom/secretKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/initContainers/env/valueFrom/secretKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/containers/envFrom/secretRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/initContainers/envFrom/secretRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/imagePullSecrets/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/opening/action/template/spec/volumes/projected/sources/secret/name
+    kind: Movie
+  # credits closing
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/volumes/secret/secretName
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/containers/env/valueFrom/secretKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/initContainers/env/valueFrom/secretKeyRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/containers/envFrom/secretRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/initContainers/envFrom/secretRef/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/imagePullSecrets/name
+    kind: Movie
+  - path: spec/template/spec/screenplays/credits/closing/action/template/spec/volumes/projected/sources/secret/name
+    kind: Movie
+
+- kind: Secret
+  version: v1
+  fieldSpecs:
+  - path: spec/config/tokenSecret
+    kind: Screener
+
+- kind: Movie
+  fieldSpecs:
+  - path: spec/movie
+    kind: Screener
