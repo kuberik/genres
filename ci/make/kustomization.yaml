@@ -19,14 +19,15 @@ configMapGenerator:
 generatorOptions:
   disableNameSuffixHash: true
 
-# vars:
-# - name: GITHUB_REPO_NAME
-#   objref: &screener_obj_ref
-#     kind: Screener
-#     name: ci
-#   fieldref:
-#     fieldpath: spec.config.repo.name
-# - name: GITHUB_REPO_OWNER
-#   objref: *screener_obj_ref
-#   fieldref:
-#     fieldpath: spec.config.repo.owner
+vars:
+- name: GITHUB_REPO_NAME
+  objref: &screener_obj_ref
+    kind: Screener
+    name: ci
+    apiVersion: core.kuberik.io/v1alpha1
+  fieldref:
+    fieldpath: spec.config.repo.name
+- name: GITHUB_REPO_OWNER
+  objref: *screener_obj_ref
+  fieldref:
+    fieldpath: spec.config.repo.owner
